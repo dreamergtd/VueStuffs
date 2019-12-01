@@ -14,3 +14,6 @@ npm install vue-router
 
 $ npm install
 $ npm run serve
+
+Links:
+https://flaviocopes.com/vue-cheat-sheet/
