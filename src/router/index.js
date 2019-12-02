@@ -2,6 +2,7 @@ import Router from "vue-router";
 import home from "@/pages/home/Index";
 import about from "@/pages/about/Index";
 import stuff from "@/pages/stuffs/Stuff";
+import stuffs from "@/pages/stuffs/Stuffs";
 
 /* 
 path : the path of the component
@@ -19,6 +20,11 @@ export default new Router({
       path: "/about",
       name: "About",
       component: about
+    },
+    {
+      path: "/stuffs",
+      name: "Stuffs",
+      component: stuffs
     },
     {
       path: "/stuff/:id",
