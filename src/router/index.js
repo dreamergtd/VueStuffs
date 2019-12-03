@@ -1,6 +1,5 @@
 import Router from "vue-router";
 import home from "@/pages/home/Index";
-import about from "@/pages/about/Index";
 import stuff from "@/pages/stuffs/Stuff";
 import stuffs from "@/pages/stuffs/Stuffs";
 
@@ -10,6 +9,7 @@ name: the name of the component
 component : the view of the component*/
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: "/",
@@ -19,7 +19,7 @@ export default new Router({
     {
       path: "/about",
       name: "About",
-      component: about
+      component: () => import('@/pages/about/Index')
     },
     {
       path: "/stuffs",

@@ -1,22 +1,22 @@
 <template>
-  <div class="container">
-    <h1>{{welcome}}</h1>
-    <div class="row">
-      <div class="col-3" v-for="(stuff, index) in this.stuffs" :key="stuff.id">
-        <a @click="stuffDetails(index)">
-          <span>{{stuff.name}}</span>
-          <img class="stuff-img" :src="stuff.image">
-        </a>
+  <LayoutPage>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>{{welcome}}</h1>
+        <router-link to="/about">
+          <span class="btn btn-secondary">About me.</span>
+        </router-link>    
       </div>
-    </div>
-    <router-link to="/about">
-      <span class="btn btn-primary">About me.</span>
-    </router-link>
-  </div>
+    </div>  
+  </LayoutPage>
 </template>
 
 <script>
+import LayoutPage from '@/layout/SimpleLayout';
 export default {
+  components: {
+    LayoutPage
+  },
   data() {
     return {
       welcome: "Welcome to the Vue.js Stuffs!",

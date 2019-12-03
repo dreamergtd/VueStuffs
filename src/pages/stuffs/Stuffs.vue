@@ -81,7 +81,29 @@ export default {
   },
   watch: {
     
-  }  
+  },
+  
+  /********************  
+  ** Lifecycle Hooks ** 
+  *********************/
+  beforeCreate() {
+    // called before the app is created
+  },
+  created(){
+    // called after the app is created
+  },  
+  beforeMount(){
+    // called before the app is mounted on the DOM
+  },
+  mounted() {
+    // called after the app is mounted on the DOM
+  },
+  beforeUpdate(){
+    // called before a property is updated
+  }, 
+  updated(){
+   // called after a property is updated
+  }
 };
 </script>
 
