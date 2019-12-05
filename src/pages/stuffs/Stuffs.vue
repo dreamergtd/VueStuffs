@@ -5,8 +5,8 @@
     <a v-bind:href="url">...</a>
     <a :href="url">...</a>
     
-    <a v-on:click="doSomething">...</a>
-    <a @click="doSomething">...</a>
+    <a v-on:click="doSomething">Do something</a>
+    <a @click="doSomething">Do something</a>
 
     <div v-if="type === 'A'">
       it's A
