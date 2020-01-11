@@ -6,15 +6,19 @@ import App from "./App.vue";
 
 // router setup in router folder
 import router from "./router";
-import VueRouter from "vue-router";
 
+import VueRouter from "vue-router";
 Vue.use(VueRouter);
+
+// Validations with Vee-Validate
+import { ValidationProvider } from 'vee-validate';
+Vue.component('ValidationProvider', ValidationProvider);
 
 // Tells Vue whether or not to show tips and
 // warnings in the developer console
 Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-  router: router /*inject the router configuration */
+    render: h => h(App),
+    router: router /*inject the router configuration */
 }).$mount("#app");
